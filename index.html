@@ -4,32 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blackjack</title>
-  <script src="scripts/main.js"></script>
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- <script src="scripts/main.js"></script> -->
 </head>
+
 <body>
-  <div class="message-box" id="messages"></div>
+  <div id= "dialogOverlay"></div>
+  <div id="dialogBox">
+    <div>
+      <div id="dialogHead"></div>
+      <div id="dialogBody"></div>
+      <div id="dialogFoot" onclick="close()"></div>
+    </div>
+  </div>
+  
   <div class="table">
+    <div class="message-box" id="messages"></div>
+  
     <div class="player">
       <label class="player-name">Dealer: 
         <span id="dealer-points" class="points"></span>
       </label>
+
       <div id="dealer-hand" class="hand">
         <!-- Dealer Hand -->
       </div>
+
     </div>
+    <!-- eo player-dealer -->
+
     <div class="player">
       <label class="player-name">Player: 
         <span id="player-points" class="points"></span>
       </label>
+
       <div id="player-hand" class="hand">
         <!-- Player Hand -->
       </div>
+
     </div>
+    <!-- eo player-player -->
+
     <div class="buttons">
-      <button id="deal-button" type="button">Deal</button>
-      <button id="hit-button" type="button">Hit</button>
-      <button id="stand-button" type="button">Stand</button>
+      <button id="deal-button" type="button" class="button">Deal</button>
+      <button id="hit-button" type="button" class="button">Hit</button>
+      <button id="stand-button" type="button" class="button">Stand</button>
+      <button id="replay-button" type="button" class="button">Replay</button>
     </div>
+
   </div>
+  <!-- eo table -->
+  <script src="scripts/main.js"></script>
 </body>
+
 </html>

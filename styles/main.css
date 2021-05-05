@@ -1,0 +1,102 @@
+body{
+margin:0;
+background-image:url('../images/StockSnap_S29T0FGLMN.jpg');
+background-color:red;
+background-repeat: no-repeat;
+/* background-size:100%; */
+background-size:cover;
+height:100vh;
+width:100vw;
+font-family:Arial, Helvetica, sans-serif;
+box-sizing: border-box;
+}
+
+#messages{
+    color:white;
+    padding:0;
+    font-size:2em;
+
+}
+#dialogOverlay{
+    display:none;
+    background: #fff;
+    opacity:.8;
+    position:fixed;
+    top: 0px;
+	left: 0px;
+    width 100%;
+    z-index:10;
+}
+#dialogBox{
+    display:none;
+    position:fixed;
+    background: rgb(248, 220, 126);
+    border-radius: 3px;
+    width:550px;
+    z-index:10;
+
+}
+
+.table{
+    height:90%;
+    width:90%;
+    /* background-color: rgb(70, 70, 65);
+    opacity:.7; */
+    margin:auto;
+    margin-top:5%;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    /* align-content:space-around; */
+}
+
+.player{
+    height:30%;
+    width:90%;
+    color:white;
+    /* background-color: pink; */
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    margin-bottom:.1.5em;
+    font-size:1em;
+}
+
+.hand{
+    background-color: rgba(245, 28, 4, 0.495); 
+    height:40%;
+    display:flex;
+    justify-content:start;
+    align-items: center;
+    flex:1;
+    border-radius:3px;
+}
+
+.hand img{
+    height:90%;
+    padding-left:.6em;
+}
+
+button.button{
+    border: solid 2px white;
+    /* border:none; */
+    border-radius:3px ;
+    padding: 0.50em 1em;
+    background-color: transparent;
+    font-family: inherit;
+    cursor: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    
+    font-size: 1.2em;
+}
+
+button:hover{
+    background-color:rgba(245, 28, 4, 0.495);
+    
+}
