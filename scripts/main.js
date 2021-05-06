@@ -141,7 +141,7 @@ function stand(deckName,dealerPoints){
     }
     return y;
   } else{
-    alert("You must deal first.")
+    Alert.render("You must deal first.");
   }
 }
 
@@ -244,34 +244,7 @@ function isWinner(playerPoints,dealerPoints){
 
 }
 
-//creates a new custom alert object
-  // function CustomAlert() {
-
-  //     this.render = function (dialog) {
-  //       let winW = window.innerWidth;
-  //       let winH = window.innerHeight;
-  //       let dialogOverlay = document.getElementById("dialogOverlay");
-  //       let dialogBox = document.getElementById("dialogBox");
-
-  //       dialogOverlay.style.display = "block";
-  //       dialogOverlay.style.height = winH + "px";
-
-  //       dialogBox.style.left = (winW / 2) - (550 * .5) + "px";
-  //       dialogBox.style.top = "20%";
-  //       dialogBox.style.display = "block";
-
-  //       document.getElementById("dialogHead").innerHTML = "Message";
-  //       document.getElementById("dialogBody").innerHTML = dialog;
-  //       document.getElementById("dialogFoot").innerHTML = '<button onclick="Alert.close()">Close</button>';
-  //     };
-
-  //     this.close = function () {
-  //       document.getElementById("dialogBox").style.display = "none";
-  //       document.getElementById("dialogOverlay").style.display = "none";
-  //     };
-
-  // }
-
+//creates custom dialog box
   class CustomAlert {
     constructor(){
       this.render = function (dialog) {
@@ -281,34 +254,27 @@ function isWinner(playerPoints,dealerPoints){
         let dialogBox = document.getElementById("dialogBox");
   
         dialogOverlay.style.display = "block";
-        dialogOverlay.style.height = winH + "px";
-  
-        dialogBox.style.left = (winW / 2) - (550 * .5) + "px";
-        dialogBox.style.top = "20%";
+        dialogOverlay.style.height = winH+"px";
         dialogBox.style.display = "block";
+        dialogBox.style.left = "25%";
+        dialogBox.style.top = "30%"
   
-        document.getElementById("dialogHead").innerHTML = "Message";
+        document.getElementById("dialogHead").innerHTML = "";
         document.getElementById("dialogBody").innerHTML = dialog;
-        document.getElementById("dialogFoot").innerHTML = '<button onclick="close()">Close</button>';
+
+        let dialogButton =  document.getElementById("dialogFoot");
+        dialogButton.innerHTML = "<button>Close</button>";
+        dialogButton.addEventListener("click",()=>{
+          document.getElementById("dialogBox").style.display = "none";
+          document.getElementById("dialogOverlay").style.display = "none";
+
+        } )
       };
 
-      // this.close = function () {
-      //   document.getElementById("dialogBox").style.display = "none";
-      //   document.getElementById("dialogOverlay").style.display = "none";
-      // };
-
     }
-
 }
-
 let Alert = new CustomAlert();
-//window.myAlert = new CustomAlert();
 
-function close(){
-  console.log("hello world");
-  document.getElementById("dialogBox").style.visibilty = "hidden";
-  document.getElementById("dialogOverlay").style.visibilty = "hidden";
-}
 
 
 // stays at eop
